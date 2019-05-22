@@ -1,6 +1,6 @@
-# Uniqloshopper
+# UniqloShopper
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/uniqloshopper`. To experiment with that code, run `bin/console` for an interactive prompt.
+This gem provides shoppers information about the products listed on Uniqlo’s Men’s T-Shirt section. This gem provides the name, price, and URL for each product listed.
 
 
 
