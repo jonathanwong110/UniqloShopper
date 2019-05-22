@@ -39,5 +39,6 @@ class UniqloShopper::CLI
   def goodbye
     puts "Check at a later time for updates"
   end
-  
+
+
 end
