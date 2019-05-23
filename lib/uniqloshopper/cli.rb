@@ -17,7 +17,7 @@ class UniqloShopper::CLI
   def clothes
     input = nil
     while input != "exit"
-      puts "Which t-shirts would you like more information on or type list to see prices or type exit to exit:"
+      puts "Enter the number of the product you want more information on or type list to see the list of products again or type exit:"
       input = gets.strip.downcase
       
       if input.to_i > 0
