@@ -10,7 +10,7 @@ class UniqloShopper::CLI
     puts "Today's T-Shirts:"
     UniqloShopper::Scraper.scrape_shirts
     UniqloShopper::Shirt.all.each_with_index do |shirt, i|
-      puts "#{i}. #{shirt.name}"
+      puts "#{i+1}. #{shirt.name}"
     end
   end
   
