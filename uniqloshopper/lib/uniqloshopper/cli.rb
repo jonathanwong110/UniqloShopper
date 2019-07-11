@@ -1,15 +1,15 @@
 class UniqloShopper::CLI
   
   def call
-    list_shirts
+    list_shirts(nil)
     clothes
     goodbye
   end
   
-  def list_shirts
+  def list_shirts(keyword)
     puts "Today's T-Shirts:"
     UniqloShopper::Scraper.scrape_shirts
-    UniqloShopper::Shirt.all.each_with_index do |shirt, i|
+    UniqloShopper::Shirt.find_shirts(keyword).each.with_index do |shirt, i|
       puts "#{i+1}. #{shirt.name}"
     end
   end
@@ -29,7 +29,9 @@ class UniqloShopper::CLI
           puts "Error, please try again"
         end
       elsif input == "list"
-        list_shirts
+        list_shirts(nil)
+      elsif UniqloShopper::Shirt.find_if_keyword(input)
+        list_shirts(input)
       else
         puts "Error, please try again"
       end
@@ -41,3 +43,4 @@ class UniqloShopper::CLI
   end
   
 end
+
